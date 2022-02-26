@@ -1,9 +1,6 @@
 import java.io.*;
 import java.net.*;
 
-import DAO.Mongo.DatabaseManager;
-import DAO.Mongo.MongoDB;
-import Handler.*;
 import com.sun.net.httpserver.*;
 
 public class Server {
@@ -23,18 +20,7 @@ public class Server {
         }
         server.setExecutor(null);
 
-        server.createContext("/add-budget", new AddBudgetHandler());
-        server.createContext("/add-category", new AddCategoryHandler());
-        server.createContext("/add-expenditure", new AddExpenditureHandler());
-        server.createContext("/delete-budget", new DeleteBudgetHandler());
-        server.createContext("/delete-category", new DeleteCategoryHandler());
-        server.createContext("/delete-expenditure", new DeleteExpenditureHandler());
-        server.createContext("/get-budgets", new GetBudgetsHandler());
-        server.createContext("/get-categories", new GetCategoriesHandler());
-        server.createContext("/get-expenditures", new GetExpendituresForDayHandler());
-        server.createContext("/login", new LoginHandler());
-        server.createContext("/register", new RegisterHandler());
-        server.createContext("/update-budget", new UpdateBudgetHandler());
+        //server.createContext("/add-budget", new AddBudgetHandler());
 
         System.out.println("Starting server");
         server.start();
@@ -42,7 +28,6 @@ public class Server {
     }
 
     public static void main(String[] args) {
-        DatabaseManager.getInstance(DatabaseManager.DB_NAME);
         String portNumber = null;
         try {
             portNumber = args[0];
