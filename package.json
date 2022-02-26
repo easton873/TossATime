@@ -13,5 +13,9 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^8.4.0"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "start-react-app": "^0.1.9"
   }
 }
