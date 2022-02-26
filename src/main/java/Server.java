@@ -1,6 +1,9 @@
 import java.io.*;
 import java.net.*;
 
+import DAO.Database;
+import Exceptions.DataAccessException;
+import Handler.CreateEventHandler;
 import com.sun.net.httpserver.*;
 
 public class Server {
@@ -20,7 +23,7 @@ public class Server {
         }
         server.setExecutor(null);
 
-        //server.createContext("/add-budget", new AddBudgetHandler());
+        server.createContext("/createEvent", new CreateEventHandler());
 
         System.out.println("Starting server");
         server.start();
@@ -29,6 +32,12 @@ public class Server {
 
     public static void main(String[] args) {
         String portNumber = null;
+        Database.init();
+        try {
+            Database.getInstance().createTables();
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+        }
         try {
             portNumber = args[0];
         } catch (ArrayIndexOutOfBoundsException e) {
