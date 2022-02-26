@@ -1,0 +1,17 @@
+{
+  "name": "budgetapi",
+  "version": "1.0.0",
+  "description": "howdy there",
+  "main": "budgetAPI.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Easton Gibson",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.4.0"
+  }
+}

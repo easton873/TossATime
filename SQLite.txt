@@ -1,0 +1,15 @@
+create table if not exists event(
+event_id varchar(255) primary key unique not null,
+event_name varchar(255) not null,
+event_creator varchar(255) not null,
+event_description varchar(255) not null
+);
+
+create table if not exists vote(
+vote_id varchar(255) primary key unique not null,
+event_id varchar(255) not null,
+vote_name varchar(255) not null,
+vote_time varchar(255) not null,
+foreign key(event_id) references event(event_id)
+);
+
