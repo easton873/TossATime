@@ -1,7 +1,6 @@
 package DAO;
 
-import Exceptions.DataAccessException;
-import Model.Vote;
+import Model.Time;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,34 +8,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class VoteDao implements DAO<Vote> {
+public class TimeDao implements DAO<Time> {
     @Override
     public void createTable() {
-        String sql = "create table if not exists vote(\n" +
-            "vote_id varchar(255) primary key unique not null,\n" +
+        String sql = "create table if not exists time(\n" +
+            "time_id varchar(255) primary key unique not null,\n" +
             "event_id varchar(255) not null,\n" +
-            "vote_name varchar(255) not null,\n" +
-            "vote_year varchar(255) not null,\n" +
-            "vote_month varchar(255) not null,\n" +
-            "vote_day varchar(255) not null,\n" +
-            "vote_hour varchar(255) not null,\n" +
+            "time_year varchar(255) not null,\n" +
+            "time_month varchar(255) not null,\n" +
+            "time_day varchar(255) not null,\n" +
+            "time_hour varchar(255) not null,\n" +
             "foreign key(event_id) references event(event_id)\n" +
             ");";
         Database.execute(sql);
     }
 
     @Override
-    public boolean create(Vote vote) {
-        String sql = "INSERT INTO vote (vote_id,event_id,vote_name,vote_year,vote_month,vote_day,vote_hour) values (?,?,?,?,?,?,?)";
+    public boolean create(Time time) {
+        String sql = "INSERT INTO time (time_id,event_id,time_year,time_month,time_day,time_hour) values (?,?,?,?,?,?)";
         try {
             PreparedStatement stmt = Database.getInstance().getConnection().prepareStatement(sql);
             stmt.setString(1, UUID.randomUUID().toString());
-            stmt.setString(2, vote.getEventID());
-            stmt.setString(3, vote.getName());
-            stmt.setString(4, vote.getYear());
-            stmt.setString(5, vote.getMonth());
-            stmt.setString(6, vote.getDay());
-            stmt.setString(7, vote.getHour());
+            stmt.setString(2, time.getEventID());
+            stmt.setString(3, time.getYear());
+            stmt.setString(4, time.getMonth());
+            stmt.setString(5, time.getDay());
+            stmt.setString(6, time.getHour());
             stmt.execute();
             Database.getInstance().closeConnection(true);
             return true;
@@ -46,22 +43,21 @@ public class VoteDao implements DAO<Vote> {
         }
     }
 
-    public List<Vote> readVotes(String eventID){
-        String sql = "SELECT * FROM vote WHERE event_id=?";
-        List<Vote> votes = new ArrayList<>();
+    public List<Time> readTimes(String eventID){
+        String sql = "SELECT * FROM time WHERE event_id=?";
+        List<Time> votes = new ArrayList<>();
         try {
             PreparedStatement stmt = Database.getInstance().getConnection().prepareStatement(sql);
             stmt.setString(1, eventID);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()){
-                votes.add(new Vote(
+                votes.add(new Time(
                     rs.getString(1),
                     rs.getString(2),
                     rs.getString(3),
                     rs.getString(4),
                     rs.getString(5),
-                    rs.getString(6),
-                    rs.getString(7)
+                    rs.getString(6)
                 ));
             }
             Database.getInstance().closeConnection(true);
@@ -73,7 +69,7 @@ public class VoteDao implements DAO<Vote> {
     }
 
     @Override
-    public Vote read(String id) {
+    public Time read(String id) {
         return null;
     }
 

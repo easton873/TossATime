@@ -1,18 +1,16 @@
 package Model;
 
-public class Vote {
+public class Time {
     String id;
     String eventID;
-    String name;
     String year;
     String month;
     String day;
     String hour;
 
-    public Vote(String id, String eventID, String name, String year, String month, String day, String hour) {
+    public Time(String id, String eventID, String year, String month, String day, String hour) {
         this.id = id;
         this.eventID = eventID;
-        this.name = name;
         this.year = year;
         this.month = month;
         this.day = day;
@@ -25,10 +23,6 @@ public class Vote {
 
     public String getEventID() {
         return eventID;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getYear() {

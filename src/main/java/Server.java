@@ -34,11 +34,6 @@ public class Server {
         String portNumber = null;
         Database.init();
         try {
-            Database.getInstance().createTables();
-        } catch (DataAccessException e) {
-            e.printStackTrace();
-        }
-        try {
             portNumber = args[0];
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("No command line args found...");

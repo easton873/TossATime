@@ -1,15 +1,28 @@
 package Handler;
 
+import DAO.Database;
+import Model.Event;
+import Model.Time;
+import Model.TimeStamp;
 import Request.CreateEventRequest;
 import Response.CreateEventResponse;
+
+import java.util.UUID;
 
 public class CreateEventHandler extends Handler<CreateEventRequest, CreateEventResponse> {
 
     @Override
     protected CreateEventResponse handle(CreateEventRequest request) {
-        System.out.println("Success");
-        System.out.println(request);
-        return null;
+        String eventID = UUID.randomUUID().toString();
+        Database.getInstance().getEventDao().create(new Event(
+            eventID, request.getCreator(), request.getDescription(), request.getName()
+        ));
+        for (TimeStamp ts : request.getTimes()){
+            Database.getInstance().getTimeDao().create(new Time(
+                null, eventID, ts.getYear(), ts.getMonth(), ts.getDay(), ts.getHour()
+            ));
+        }
+        return new CreateEventResponse();
     }
 
     @Override

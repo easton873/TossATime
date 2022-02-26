@@ -13,14 +13,35 @@ public class Database {
     private static Database instance;
 
     private List<DAO> daos;
+    private EventDao eventDao;
+    private VoteDao voteDao;
+    private TimeDao timeDao;
 
     private Database(){
         daos = new ArrayList<>();
-        daos.add(new EventDao());
+        eventDao = new EventDao();
+        daos.add(eventDao);
+        voteDao = new VoteDao();
+        daos.add(voteDao);
+        timeDao = new TimeDao();
+        daos.add(timeDao);
+    }
+
+    public EventDao getEventDao() {
+        return eventDao;
+    }
+
+    public VoteDao getVoteDao() {
+        return voteDao;
+    }
+
+    public TimeDao getTimeDao() {
+        return timeDao;
     }
 
     public static void init(){
         instance = new Database();
+        instance.createTables();
     }
 
     public static Database getInstance(){
@@ -28,6 +49,17 @@ public class Database {
     }
 
     private Connection conn;
+
+    public static void execute(String sql){
+        try {
+            Database.getInstance().getConnection().createStatement().execute(sql);
+            Database.getInstance().closeConnection(true);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+        }
+    }
 
     public Connection openConnection() throws DataAccessException {
         try {
@@ -78,7 +110,7 @@ public class Database {
         }
     }
 
-    public void createTables() throws DataAccessException{
+    public void createTables() {
         for (DAO dao : daos){
             dao.createTable();
         }

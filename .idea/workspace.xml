@@ -2,14 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ab10b43-a7f8-4113-a8d2-5e7f550744a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_36_0_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_12_10.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartBudgetBackend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SmartBudgetBackend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sqlite-journal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/EventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/EventDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/VoteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/VoteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Handler/CreateEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handler/CreateEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Request/CreateEventRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Request/CreateEventRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/EventDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/EventDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/VoteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/VoteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/BadLoginException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exceptions/BadLoginException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/DataAccessException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exceptions/DataAccessException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Handler/CreateEventHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handler/CreateEventHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Handler/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handler/Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Model/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/Event.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Model/JsonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/JsonHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Model/Vote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/Vote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Request/CreateEventRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Request/CreateEventRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Response/CreateEventResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Response/CreateEventResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Response/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Response/Response.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.sqlite" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +41,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -31,11 +51,22 @@
   <component name="ProjectId" id="25fByh09y7QapHIDTwCnfIv65jo" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Handler" />
+      <recent name="DAO" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CreateEventHandlerTest.works">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="SmartBudgetBackend" />
@@ -57,8 +88,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CreateEventHandlerTest.works" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartBudgetBackend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Handler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Handler" />
+      <option name="MAIN_CLASS_NAME" value="Handler.CreateEventHandlerTest" />
+      <option name="METHOD_NAME" value="works" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventDaoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartBudgetBackend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.EventDaoTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeDaoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartBudgetBackend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.TimeDaoTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VoteDaoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartBudgetBackend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.VoteDaoTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreateEventHandlerTest.works" />
+        <item itemvalue="JUnit.TimeDaoTest.test" />
+        <item itemvalue="JUnit.VoteDaoTest.test" />
+        <item itemvalue="JUnit.EventDaoTest.test" />
         <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
