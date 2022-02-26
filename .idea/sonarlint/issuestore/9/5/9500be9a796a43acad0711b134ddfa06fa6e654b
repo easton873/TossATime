@@ -1,0 +1,10 @@
+
+S	java:S106?"9Replace this use of System.out or System.err by a logger.( Ñ¤µıÿÿÿÿ
+I
+java:S1128".Remove this unused import 'DAO.Mongo.MongoDB'.(ğ‚ˆÿÿÿÿÿ
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(Ï«ï‚ùÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ô‡Îşÿÿÿÿ
+c	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(Ø–Ñ¡üÿÿÿÿ
+K
+java:S1191"5Use classes from the Java API instead of Sun classes.(üÕÙä
+c	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(Ø–Ñ¡üÿÿÿÿ

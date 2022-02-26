@@ -1,0 +1,9 @@
+
+k
+java:S1450"URemove the "client" field and declare it as a local variable in the relevant methods.(¥ûà—
+C
+java:S1874"-Remove this use of "getDB"; it is deprecated.(ª·ŸÂ
+E
+java:S1068
+"*Remove this unused "dbName" private field.(‚™šôøÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§¤í•ûÿÿÿÿ
