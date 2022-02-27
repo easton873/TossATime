@@ -26,11 +26,12 @@ public class VoteDao implements DAO<Vote> {
     }
 
     @Override
-    public boolean create(Vote vote) {
+    public String create(Vote vote) {
         String sql = "INSERT INTO vote (vote_id,event_id,vote_name,vote_year,vote_month,vote_day,vote_hour) values (?,?,?,?,?,?,?)";
+        String id = UUID.randomUUID().toString();
         try {
             PreparedStatement stmt = Database.getInstance().getConnection().prepareStatement(sql);
-            stmt.setString(1, UUID.randomUUID().toString());
+            stmt.setString(1, id);
             stmt.setString(2, vote.getEventID());
             stmt.setString(3, vote.getName());
             stmt.setString(4, vote.getYear());
@@ -39,10 +40,10 @@ public class VoteDao implements DAO<Vote> {
             stmt.setString(7, vote.getHour());
             stmt.execute();
             Database.getInstance().closeConnection(true);
-            return true;
+            return id;
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
+            return null;
         }
     }
 

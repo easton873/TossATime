@@ -13,21 +13,20 @@ public class CreateEventHandler extends Handler<CreateEventRequest, CreateEventR
 
     @Override
     protected CreateEventResponse handle(CreateEventRequest request) {
-        String eventID = UUID.randomUUID().toString();
-        Database.getInstance().getEventDao().create(new Event(
-            eventID, request.getCreator(), request.getDescription(), request.getName()
+        String eventID = Database.getInstance().getEventDao().create(new Event(
+            null, request.getCreator(), request.getDescription(), request.getName()
         ));
         for (TimeStamp ts : request.getTimes()){
             Database.getInstance().getTimeDao().create(new Time(
                 null, eventID, ts.getYear(), ts.getMonth(), ts.getDay(), ts.getHour()
             ));
         }
-        return new CreateEventResponse();
+        return new CreateEventResponse(eventID);
     }
 
     @Override
     protected CreateEventResponse fail(Exception e) {
-        return new CreateEventResponse(e.getMessage());
+        return new CreateEventResponse(e.getMessage(), false);
     }
 
     @Override

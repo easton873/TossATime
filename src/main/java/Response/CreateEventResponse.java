@@ -1,11 +1,14 @@
 package Response;
 
 public class CreateEventResponse extends Response {
-    public CreateEventResponse() {
+    private String eventID;
+
+    public CreateEventResponse(String id) {
         super();
+        eventID = id;
     }
 
-    public CreateEventResponse(String message) {
+    public CreateEventResponse(String message, boolean success) {
         super(message);
     }
 }

@@ -24,11 +24,12 @@ public class TimeDao implements DAO<Time> {
     }
 
     @Override
-    public boolean create(Time time) {
+    public String create(Time time) {
         String sql = "INSERT INTO time (time_id,event_id,time_year,time_month,time_day,time_hour) values (?,?,?,?,?,?)";
+        String id = UUID.randomUUID().toString();
         try {
             PreparedStatement stmt = Database.getInstance().getConnection().prepareStatement(sql);
-            stmt.setString(1, UUID.randomUUID().toString());
+            stmt.setString(1, id);
             stmt.setString(2, time.getEventID());
             stmt.setString(3, time.getYear());
             stmt.setString(4, time.getMonth());
@@ -36,10 +37,10 @@ public class TimeDao implements DAO<Time> {
             stmt.setString(6, time.getHour());
             stmt.execute();
             Database.getInstance().closeConnection(true);
-            return true;
+            return id;
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
+            return null;
         }
     }
 

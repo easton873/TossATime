@@ -2,8 +2,9 @@ import java.io.*;
 import java.net.*;
 
 import DAO.Database;
-import Exceptions.DataAccessException;
 import Handler.CreateEventHandler;
+import Handler.GetEventHandler;
+import Handler.VoteEventHandler;
 import com.sun.net.httpserver.*;
 
 public class Server {
@@ -24,6 +25,8 @@ public class Server {
         server.setExecutor(null);
 
         server.createContext("/createEvent", new CreateEventHandler());
+        server.createContext("/voteEvent", new VoteEventHandler());
+        server.createContext("/getEvent", new GetEventHandler());
 
         System.out.println("Starting server");
         server.start();

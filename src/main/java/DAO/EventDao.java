@@ -22,20 +22,21 @@ public class EventDao implements DAO<Event> {
     }
 
     @Override
-    public boolean create(Event event) {
+    public String create(Event event) {
         String sql = "INSERT INTO event (event_id,event_name,event_creator,event_description) values (?,?,?,?)";
+        String id = UUID.randomUUID().toString();
         try {
             PreparedStatement stmt = Database.getInstance().getConnection().prepareStatement(sql);
-            stmt.setString(1, event.getUuid());
+            stmt.setString(1, id);
             stmt.setString(2, event.getName());
             stmt.setString(3, event.getCreator());
             stmt.setString(4, event.getDescription());
             stmt.execute();
             Database.getInstance().closeConnection(true);
-            return true;
+            return id;
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
+            return null;
         }
     }
 
