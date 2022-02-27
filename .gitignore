@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+node_modules
+=======
 /tossatime/node_modules
+<<<<<<< HEAD
 /tossatime/build/
 package-lock.json
+=======
+package-lock.json
+>>>>>>> 0ea0823894bf6a89f92cbea49119918aeed01087
+>>>>>>> c1fcb91ae0ddcafe7718363b38fad2072dd7de19
