@@ -7,14 +7,16 @@ class AllTimes extends Component {
         this.state = { 
             dayOfWeek: [0,1,2,3,4,5,6],
             description: 'This is a description of the event',
-            weekday: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+            weekday: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            value: ''
         } 
     }
 
     handleSubmit = () => {
 
-        this.setState({  })
-        console.log()
+        const value = JSON.parse(Object.entries(localStorage))
+
+        alert(value)
 
     }
 
@@ -25,11 +27,11 @@ class AllTimes extends Component {
 
         return (
 
-            <form onSubmit=''>
+            <form className='form'>
                 <div className='container'>
                     <div className='description'>
                         {this.state.description}
-                <button className='btn btn-dark m-3'>Submit</button>
+                <button className='btn btn-dark m-3' onClick={this.handleSubmit}>Submit</button>
                     </div>
                     
                         {this.state.dayOfWeek.map((value, index) => {

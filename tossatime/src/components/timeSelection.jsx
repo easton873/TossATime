@@ -37,6 +37,7 @@ class timeSelection extends Component {
 					type='checkbox'
 					checked={this.isAvailable}
 					value={this.state.value}
+					key={this.state.value}
 					onChange={this.handleInputChange}/>
 				</label>
 
