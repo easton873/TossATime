@@ -1,2 +1,0 @@
-# TossATime
-Hackathon guy
