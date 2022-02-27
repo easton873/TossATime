@@ -1,4 +1,7 @@
-open up /tossatime and then run the following two commands
+To run the app locally:
+run the following three commands from the main repository folder:
+
+`cd tossatime`
 
 `npm install`
 
@@ -16,3 +19,13 @@ To launch the server in EC2 first
 and then
 
 `sudo mvn exec:java -Dexec.mainClass=Server -Dexec.args="80"`
+
+then in a separate window connect to the EC2 instance again and
+
+`cd tossatime`
+
+`npm install`
+
+`npm run build`
+
+`serve -s build`
