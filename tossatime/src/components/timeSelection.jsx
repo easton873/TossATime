@@ -7,7 +7,8 @@ class timeSelection extends Component {
 		this.state = {
 			time: this.props.time,
 			dayOfWeek: this.props.dayOfWeek,
-			isAvailable: false
+			isAvailable: false,
+			value: ''+this.props.dayOfWeek+this.props.time
 	};
 
 	this.handleInputChange = this.handleInputChange.bind(this);
@@ -22,21 +23,20 @@ class timeSelection extends Component {
 			[name]: value
 		});
 
-
 	}
 
-	render() {
 
-		const time = this.state.time
+	render() {
 
 		return (
 
 				<label>
-					<p>{this.props.dayOfWeek}, {time}</p>
-					<input 
+					<p>{this.state.dayOfWeek}, {this.state.time}</p>
+					<input
 					name='isAvailable' 
 					type='checkbox'
 					checked={this.isAvailable}
+					value={this.state.value}
 					onChange={this.handleInputChange}/>
 				</label>
 
