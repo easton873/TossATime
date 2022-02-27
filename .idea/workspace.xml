@@ -4,26 +4,11 @@
     <list default="true" id="3ab10b43-a7f8-4113-a8d2-5e7f550744a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/EventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/EventDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/TimeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/TimeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/VoteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/VoteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Handler/CreateEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handler/CreateEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Request/VoteEventRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Request/VoteEventRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Response/CreateEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Response/CreateEventResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAO/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAO/EventDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/EventDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAO/TimeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/TimeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAO/VoteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/VoteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Handler/CreateEventHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handler/CreateEventHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Request/VoteEventRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Request/VoteEventRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Response/CreateEventResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Response/CreateEventResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Handler/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handler/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Handler/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handler/Handler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DAO/EventDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DAO/EventDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DAO/TimeDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DAO/TimeDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DAO/VoteDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DAO/VoteDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tossatime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tossatime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tossatime/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/tossatime/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 node_modules
+=======
+/tossatime/node_modules
+package-lock.json
+>>>>>>> 0ea0823894bf6a89f92cbea49119918aeed01087
