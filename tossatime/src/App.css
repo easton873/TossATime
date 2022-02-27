@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "description description description description description description description"
+    "dayofweek1 dayofweek2 dayofweek3 dayofweek4 dayofweek5 dayofweek6 dayofweek7";
+}
+
+.header {
+  grid-area: header;
+}
+
+.dayofweek1 {
+  grid-area: dayofweek1;
+}
+.dayofweek2 {
+  grid-area: dayofweek2;
+}
+.dayofweek3 {
+  grid-area: dayofweek3;
+}
+.dayofweek4 {
+  grid-area: dayofweek4;
+}
+.dayofweek5 {
+  grid-area: dayofweek5;
+}
+.dayofweek6 {
+  grid-area: dayofweek6;
+}
+.dayofweek7 {
+  grid-area: dayofweek7;
+}
+
+.description {
+  grid-area: description;
+}
