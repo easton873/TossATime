@@ -55,6 +55,7 @@ public abstract class Handler<Req, Resp extends Response> implements HttpHandler
         System.out.println("Request Received");
         OutputStream responseBody = exchange.getResponseBody();
         String respone = jsonify(handleRequest(parse(readString(exchange.getRequestBody()))));
+        exchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
         exchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, 0);
         writeString(respone, responseBody);
         exchange.close();
